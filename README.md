@@ -1,11 +1,15 @@
-# proyectoISPC
+                                                   ISPC
+                                                   
+                                                   
+                        Actividad Grupal de Gestión de Proyecto GitHub y Scrum
  
-ISPC
 
-Somos un EQUIPO DE TRABAJO conformado por estudiantes de DESARROLLO WEB Y APLICACIONES DIGITALES
+      ------------------------------------------------------------------------------------------------
+      Somos un EQUIPO DE TRABAJO conformado por estudiantes de DESARROLLO WEB Y APLICACIONES DIGITALES
+      ------------------------------------------------------------------------------------------------
+
 
 Que estamos haciendo:
-
 
                                              ETAPA 2 - Sprint 1  
 
