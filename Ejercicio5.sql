@@ -27,7 +27,7 @@ values (23,"Tomy","22/04/18","M",8912312);
 INSERT INTO Perro(ID_Perro, Nombre, Fecha_nac, Sexo, DNI_dueno) 
 values (37,"Luna","03/07/20","F",8912312);
 
-select p.Nombre from Perro p inner join Dueno d on p.DNI_dueno = d.DNI and d.Nombre = "Pedro";
+select p.Nombre from Perro p inner join Dueno d on p.DNI_dueno = d.DNI and d.Nombre = "Pedro"; --Ejercicio 5 multitabla
 
 select p.Nombre from Perro p, Dueno d where p.DNI_dueno = d.DNI and d.Nombre = "Pedro";
 
