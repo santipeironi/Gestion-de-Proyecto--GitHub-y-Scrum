@@ -25,15 +25,11 @@ Descripción_serv varchar(75),
 Monto int, 
 )
 
-create table 
-
-
-
-
-
-
-)
-
-
-
+create table PERRO22 (
+ID_PERRO2 INT
+ID_PERRO3 INT
+ID_PERRO4 INT
+ID_PERRO5 INT
+FOREIGN KEY (id_perro2, id_perro3)
+);
 
