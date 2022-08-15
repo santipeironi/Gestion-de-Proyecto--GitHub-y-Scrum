@@ -25,14 +25,25 @@ values (12345678,"Pedro","Gonzalez",35150123,"Lima 324");
 INSERT INTO Dueno(DNI, Nombre, Apellido, Telefono, Direccion) 
 values (12345679,"Martina","Gomez",35150133,"Lima 354");
 
-INSERT INTO Perro(ID_Perro, Nombre, Fecha_nac, Sexo, DNI_dueno) 
-values (23,"Tomy","22/04/18","M",8912312);
+INSERT INTO Dueno(DNI, Nombre, Apellido, Telefono, Direccion) 
+values (12345669,"Lara","pedernera",35550133,"Lima 854");
 
 INSERT INTO Perro(ID_Perro, Nombre, Fecha_nac, Sexo, DNI_dueno) 
-values (37,"Luna","03/07/20","F",8912312);
+values (26,"Cleo","22/05/18","F",12345678);
+
+INSERT INTO Perro(ID_Perro, Nombre, Fecha_nac, Sexo, DNI_dueno) 
+values (23,"Tomy","22/04/18","M",12345679);
+
+INSERT INTO Perro(ID_Perro, Nombre, Fecha_nac, Sexo, DNI_dueno) 
+values (37,"Luna","03/07/20","F",12345669);
 
 select p.Nombre from Perro p inner join Dueno d on p.DNI_dueno = d.DNI and d.Nombre = "Pedro"; 
 
 select p.Nombre from Perro p, Dueno d where p.DNI_dueno = d.DNI and d.Nombre = "Pedro";
 
 SELECT Nombre from Perro WHERE DNI_dueno = (SELECT DNI from Dueno where Nombre = "Pedro");
+
+SELECT*from Perro where Nombre;
+
+UPDATE Perro set Fecha_nac = "03/07/12" WHERE Nombre = "Tomy";
+
