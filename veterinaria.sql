@@ -1,24 +1,22 @@
 CREATE DATABASE veterinaria;
 USE veterinaria;
-
-CREATE TABLE `Dueno` (
-  `DNI` int NOT NULL,
-  `Nombre` varchar(90) NOT NULL,
-  `Apellido` varchar(90) NOT NULL,
-  `Telefono` int DEFAULT NULL,
-  `Direccion` varchar(90) NOT NULL,
-  PRIMARY KEY (`DNI`)
+CREATE TABLE Dueno (
+  DNI int NOT NULL,
+  Nombre varchar(90) NOT NULL,
+  Apellido varchar(90) NOT NULL,
+  Telefono int DEFAULT NULL,
+  Direccion varchar(90) NOT NULL,
+  PRIMARY KEY (DNI)
 );
-
-CREATE TABLE `Perro` (
-  `ID_Perro` int NOT NULL,
-  `Nombre` varchar(90) NOT NULL,
-  `Fecha_nac` date NOT NULL,
-  `Sexo` varchar(1) DEFAULT NULL,
-  `DNI_dueno` int NOT NULL,
-  PRIMARY KEY (`ID_Perro`),
-  KEY `DNI_dueno` (`DNI_dueno`),
-  CONSTRAINT `Perro_ibfk_1` FOREIGN KEY (`DNI_dueno`) REFERENCES `Dueno` (`DNI`)
+CREATE TABLE Perro (
+  ID_Perro int NOT NULL,
+  Nombre varchar(90) NOT NULL,
+  Fecha_nac date NOT NULL,
+  Sexo varchar(1) DEFAULT NULL,
+  DNI_dueno int NOT NULL,
+  PRIMARY KEY (ID_Perro),
+  KEY DNI_dueno (DNI_dueno),
+  CONSTRAINT Perro_ibfk_1 FOREIGN KEY (DNI_dueno) REFERENCES Dueno (DNI)
 );
 
 INSERT INTO Dueno(DNI, Nombre, Apellido, Telefono, Direccion) 
